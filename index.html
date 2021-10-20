@@ -7,19 +7,69 @@
     <title>Title</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <style>
+        #myHeader {
+            background: red;
+        }
+        .header-class {
+            background: blue;
+        }
         header {
             background: lightblue;
         }
+
+        .my-block {
+            background-color: lightgreen;
+        }
+
+
+        /* styl dla nastepnego sąsiada div .my-block */
+        .my-block + div {
+            border: 2px solid pink;
+        }
+        
+        /* styl dla wszystkich zagniezdzonych divów w .my-block */
+        .my-block div {
+            border: 2px solid red;
+        }
+        
+        /* styl dla wszystkich zagniezdzonych divów PIERWSZEGO POZIOMU w .m-yblock */
+        .my-block > div > div {
+            border: 2px solid blue;
+        }
+
+        .my-block:hover {            
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+        .my-second-block::before {
+            content: "*";
+        }
+        .my-second-block::after {
+            content: "<div>dupa</div>";
+        }
+
+
+
     </style>
     <link rel="stylesheet" href="/styles.css">
     <script src="/scripts.js"></script>
 </head>
 <body>
-    <header>Head test</header>
-    <div class="header">Div Test</div>
-    <div class="header">Div Test</div>
+    <header id="myHeader" class="headerClass">Head test</header>
+    <div>test</div>
+    <div class="my-block">
+        <div>Zero
+            <div>Zero plus</div>
+        </div>
+        <div class="first">First</div>
+        <div class="second">Second</div>
+    </div>
+    <div class="my-second-block">Div Test</div>
     <span>Span test</span>
     <span>Span test</span>
-    <asdsadsasad></asdsadsasad>
+    <asdsadsasad>
+
+    </asdsadsasad>
 </body>
 </html>
