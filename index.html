@@ -32,7 +32,7 @@
             border: 2px solid red;
         }
         
-        /* styl dla wszystkich zagniezdzonych divów PIERWSZEGO POZIOMU w .m-yblock */
+        /* styl dla wszystkich zagniezdzonych divów PIERWSZEGO POZIOMU w .my-block */
         .my-block > div > div {
             border: 2px solid blue;
         }
@@ -49,7 +49,21 @@
             content: "<div>dupa</div>";
         }
 
+        .perfect {
+            display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+            width: 100%;
+            height: 400px;
+            border: 2px solid blue
+        }
 
+        .perfect > div {
+            width: 100px;
+            height: 100px;;
+            border: 2px solid red;
+        }
 
     </style>
     <link rel="stylesheet" href="/styles.css">
@@ -68,8 +82,10 @@
     <div class="my-second-block">Div Test</div>
     <span>Span test</span>
     <span>Span test</span>
-    <asdsadsasad>
-
-    </asdsadsasad>
+    <div class="perfect">
+        <div>Child1</div>
+        <div>Child2</div>
+        <div>Child3</div>
+    </div>
 </body>
 </html>
